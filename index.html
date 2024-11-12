@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Del</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/del-icon.png" type="image/png">
+    <a href="cart.html"></a>
+</head>
+
+<body>
+    <nav class="navbar" id="navigation">
+        <div class="logoo">
+            <h1 class="text-title">Food Del</h1>
+        </div>
+        <div class="head-menu">
+            <ul>
+                <li><a href="index.html" class="homee">Home</a></li>
+                <li><a href="#menu-click">Menu</a></li>
+                <li><a href="#about-content">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <div class="right">
+                <img src="images/search_icon.png" alt="" class="search " onclick="toggleSearch()" title="search">
+            </div>
+            <div class="search">
+                <div class="right">
+                    <img src="images/basket_icon.png" alt="Basket Icon" onclick="opencart()" title="cart">
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <div class="right">
+                <button id="openPopup" title="sign in">sign in</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="header-contents">
+            <h2>Order your favourite food here</h2>
+            <p>"Our specialty lies in our rapid farm-to-table delivery, bringing you the freshest ingredients and
+                chef-inspired meals that are both nutritious and delicious, all in record time."</p>
+            <button>View Menu</button>
+        </div>
+    </div>
+    <!-- Menu list -->
+    <div class="menu">
+        <div class="menu-text" id="menu-click">
+            <h1>Explore Our menu</h1>
+            <p>Explore our menu and let your taste buds wander through a world of flavors and textures. Dive into a
+                variety of options, each made with passion and high quality ingredients, and find the perfect meal to
+                match your mood and occasion.</p>
+        </div>
+        <div class="menu-list">
+            <div class="menu-item" onclick="location.href='#salad-section'">
+                <img src="images/menu_1.png" alt="">
+                <p>Salad</p>
+            </div>
+            <div class="menu-item" onclick="location.href='#roll-section'">
+                <img src="images/menu_2.png" alt="">
+                <p>Rolls</p>
+            </div>
+            <div class="menu-item" onclick="location.href='#icecream-section'">
+                <img src="images/menu_3.png" alt="">
+                <p>Deserts</p>
+            </div>
+            <div class="menu-item" onclick="location.href='#sandwich-section'">
+                <img src="images/menu_4.png" alt="">
+                <p>Sandwich</p>
+            </div>
+            <div class="menu-item" onclick="location.href='#cake-section'">
+                <img src="images/menu_5.png" alt="">
+                <p>Cake</p>
+            </div>
+            <div class="menu-item" onclick="location.href='#veg-section'">
+                <img src="images/menu_6.png" alt="">
+                <p>Pure Veg</p>
+            </div>
+            <div class="menu-item" onclick="location.href='#pasta-section'">
+                <img src="images/menu_7.png" alt="">
+                <p>Pasta</p>
+            </div>
+            <div class="menu-item" onclick="location.href='#noodles-section'">
+                <img src="images/menu_8.png" alt="">
+                <p>Noodles</p>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <!-- Food item -->
+    <div class="food-item">
+        <h2 id="show-dishes">Top dishes near you</h2>
+        
+        <!-- search option -->
+        <div class="search-input" style="display: none;">
+            <input type="text" placeholder="Search dishes..." onkeyup="filterDishes()">
+            <span class="cancel" onclick="toggleSearch()" title="cancel">❌</span>
+        </div>
+        
+        <div class="food-categories">
+            <div class="food-cat" id="salad-section">
+                <img src="images/food_1.png" alt="Greek salad"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_1.png',
+                    name: 'Greek Salad',
+                    price: 12,
+                    category: 'Salad'
+                })">
+                <p class="food-name">Greek salad</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$12</p>
+            </div>
+
+            <div class="food-cat">
+                <img src="images/food_2.png" alt="Veg salad"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_2.png',
+                    name: 'Veg Salad',
+                    price: 18,
+                    category: 'Salad'
+                })">
+
+                <p class="food-name">Veg salad</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$18</p>
+            </div>
+
+            <div class="food-cat">
+                <img src="images/food_3.png" alt="Clover Salad"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_3.png',
+                    name: 'Clover Salad',
+                    price: 16,
+                    category: 'Salad'
+                })">
+
+                <p class="food-name">Clover Salad</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$16</p>
+            </div>
+
+            <div class="food-cat">
+                <img src="images/food_4.png" alt="Chicken Salad"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_4.png',
+                    name: 'Chicken Salad',
+                    price: 24,
+                    category: 'Salad'
+                })">
+
+                <p class="food-name">Chicken Salad</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$24</p>
+            </div>
+
+            <div class="food-cat" id="roll-section">
+                <img src="images/food_5.png" alt="Lasagna Rolls"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_5.png',
+                    name: 'Lasagna Roll',
+                    price: 14,
+                    category: 'Rolls'
+                })">
+
+                <p class="food-name">Lasagna Rolls</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$14</p>
+            </div>
+
+            <div class="food-cat">
+                <img src="images/food_6.png" alt="Peri Peri Rolls"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_6.png',
+                    name: 'Peri Peri Roll',
+                    price: 12,
+                    category: 'Rolls'
+                })">
+
+                <p class="food-name">Peri Peri Rolls</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$12</p>
+            </div>
+
+            <div class="food-cat">
+                <img src="images/food_7.png" alt="Chicken Rolls"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_7.png',
+                    name: 'Chicken Roll',
+                    price: 20,
+                    category: 'Rolls'
+                })">
+
+                <p class="food-name">Chicken Rolls</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$20</p>
+            </div>
+
+            <div class="food-cat">
+                <img src="images/food_8.png" alt="Veg Rolls"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_8.png',
+                    name: 'Veg Roll',
+                    price: 15,
+                    category: 'Rolls'
+                })">
+
+                <p class="food-name">Veg Rolls</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$15</p>
+            </div>
+
+            <div class="food-cat" id="icecream-section">
+                <img src="images/food_9.png" alt="Ripple Ice Cream"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_9.png',
+                    name: 'Ripple Ice Cream',
+                    price: 14,
+                    category: 'Deserts'
+                })">
+
+                <p class="food-name">Ripple Ice Cream</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$14</p>
+            </div>
+            <div class="food-cat">
+                <img src="images/food_10.png" alt="Fruit Ice Cream"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_10.png',
+                    name: 'Fruit Ice Cream',
+                    price: 22,
+                    category: 'Deserts'
+                })">
+
+                <p class="food-name">Fruit Ice Cream</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$22</p>
+            </div>
+
+            <div class="food-cat">
+                <img src="images/food_11.png" alt="Jar Ice Cream"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_11.png',
+                    name: 'Jar Ice Cream',
+                    price: 10,
+                    category: 'Deserts'
+                })">
+
+                <p class="food-name">Jar Ice Cream</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$10</p>
+            </div>
+
+            <div class="food-cat">
+                <img src="images/food_12.png" alt="Vanilla Ice Cream"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_12.png',
+                    name: 'Vanilla Ice Cream',
+                    price: 12,
+                    category: 'Deserts'
+                })">
+
+                <p class="food-name">Vanilla Ice Cream</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$12</p>
+            </div>
+
+            <div class="food-cat" id="sandwich-section">
+                <img src="images/food_13.png" alt="Chicken Sandwich"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_13.png',
+                    name: 'Chicken Sandwich',
+                    price: 12,
+                    category: 'Sandwich'
+                })">
+
+                <p class="food-name">Chicken Sandwich</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$12</p>
+            </div>
+
+            <div class="food-cat">
+                <img src="images/food_14.png" alt="Vegan Sandwich"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_14.png',
+                    name: 'Vegan Sandwich',
+                    price: 18,
+                    category: 'Sandwich'
+                })">
+
+                <p class="food-name">Vegan Sandwich</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$18</p>
+            </div>
+
+            <div class="food-cat">
+                <img src="images/food_15.png" alt="Grilled Sandwich"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_15.png',
+                    name: 'Grilled Sandwich',
+                    price: 16,
+                    category: 'Sandwich'
+                })">
+
+                <p class="food-name">Grilled Sandwich</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$16</p>
+            </div>
+
+            <div class="food-cat">
+                <img src="images/food_16.png" alt="Bread Sandwich"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_16.png',
+                    name: 'Bread Sandwich',
+                    price: 24,
+                    category: 'Sandwich'
+                })">
+
+                <p class="food-name">Bread Sandwich</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$24</p>
+            </div>
+
+            <div class="food-cat" id="cake-section">
+                <img src="images/food_17.png" alt="Cup Cake"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_17.png',
+                    name: 'Cup Cake',
+                    price: 14,
+                    category: 'Cake'
+                })">
+
+                <p class="food-name">Cup Cake</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$14</p>
+            </div>
+
+            <div class="food-cat">
+                <img src="images/food_18.png" alt="Vegan Cake"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_18.png',
+                    name: 'Vegan Cake',
+                    price: 12,
+                    category: 'Cake'
+                })">
+
+                <p class="food-name">Vegan Cake</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$12</p>
+            </div>
+
+            <div class="food-cat">
+                <img src="images/food_19.png" alt="Butterscotch Cake"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_19.png',
+                    name: 'Butterscotch Cake',
+                    price: 20,
+                    category: 'Cake'
+                })">
+
+                <p class="food-name">Butterscotch Cake</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$20</p>
+            </div>
+
+            <div class="food-cat">
+                <img src="images/food_20.png" alt="Sliced Cake"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_20.png',
+                    name: 'Sliced Cake',
+                    price: 15,
+                    category: 'Cake'
+                })">
+
+                <p class="food-name">Sliced Cake</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$15</p>
+            </div>
+
+            <div class="food-cat" id="veg-section">
+                <img src="images/food_21.png" alt="Garlic Mushroom"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_21.png',
+                    name: 'Garlic Mushroom',
+                    price: 14,
+                    category: 'Pure Veg'
+                })">
+
+                <p class="food-name">Garlic Mushroom</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$14</p>
+            </div>
+
+            <div class="food-cat">
+                <img src="images/food_22.png" alt="Fried Cauliflower"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_22.png',
+                    name: 'Fried Cauliflower',
+                    price: 22,
+                    category: 'Pure Veg'
+                })">
+
+                <p class="food-name">Fried Cauliflower</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$22</p>
+            </div>
+
+            <div class="food-cat">
+                <img src="images/food_23.png" alt="Mix Veg Pulao"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_23.png',
+                    name: 'Mix Veg Pulao',
+                    price: 10,
+                    category: 'Pure Veg'
+                })">
+
+                <p class="food-name">Mix Veg Pulao</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$10</p>
+            </div>
+
+            <div class="food-cat">
+                <img src="images/food_24.png" alt="Rice Zucchini"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_24.png',
+                    name: 'Rice Zucchini',
+                    price: 16,
+                    category: 'Pure Veg'
+                })">
+
+                <p class="food-name">Rice Zucchini</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$16</p>
+            </div>
+
+            <div class="food-cat" id="pasta-section">
+                <img src="images/food_25.png" alt="Grilled Veggies"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_25.png',
+                    name: 'Grilled Veggies',
+                    price: 20,
+                    category: 'Pasta'
+                })">
+
+                <p class="food-name">Grilled Veggies</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$20</p>
+            </div>
+
+            <div class="food-cat">
+                <img src="images/food_26.png" alt="Chicken Curry"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_26.png',
+                    name: 'Chicken Curry',
+                    price: 24,
+                    category: 'Pasta'
+                })">
+
+                <p class="food-name">Chicken Curry</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$24</p>
+            </div>
+
+            <div class="food-cat">
+                <img src="images/food_27.png" alt="Lamb Stew"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_27.png',
+                    name: 'Lamb Stew',
+                    price: 30,
+                    category: 'Pasta'
+                })">
+
+                <p class="food-name">Lamb Stew</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$30</p>
+            </div>
+
+            <div class="food-cat">
+                <img src="images/food_28.png" alt="Pasta"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_28.png',
+                    name: 'Tuscan Pasta',
+                    price: 18,
+                    category: 'Pasta'
+                })">
+
+                <p class="food-name">Tuscan Pasta</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$18</p>
+            </div>
+
+            <div class="food-cat" id="noodles-section">
+                <img src="images/food_29.png" alt="Seafood Paella"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_29.png',
+                    name: 'Seafood Paella',
+                    price: 35,
+                    category: 'Noodles'
+                })">
+
+                <p class="food-name">Seafood Paella</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$35</p>
+            </div>
+
+            <div class="food-cat">
+                <img src="images/food_30.png" alt="Beef Tacos"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_30.png',
+                    name: 'Beef Tacos',
+                    price: 22,
+                    category: 'Noodles'
+                })">
+
+                <p class="food-name">Beef Tacos</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$22</p>
+            </div>
+
+            <div class="food-cat">
+                <img src="images/food_31.png" alt="Chicken Wings"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_31.png',
+                    name: 'Chicken Wings',
+                    price: 16,
+                    category: 'Noodles'
+                })">
+
+                <p class="food-name">Chicken Wings</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$16</p>
+            </div>
+
+            <div class="food-cat">
+                <img src="images/food_32.png" alt="Shrimp Skewers"><br>
+                <img src="images/add_icon_white.png" class="count" alt="" onclick="addToCart({
+                    image: 'images/food_32.png',
+                    name: 'Shrimp Skewers',
+                    price: 28,
+                    category: 'Noodles'
+                })">
+
+                <p class="food-name">Shrimp Skewers</p>
+                <img src="images/rating_starts.png" alt="Rating">
+                <p>Food provides essential nutrients for overall health and well-being</p>
+                <p class="price">$28</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- result not found! -->
+     <h1 id="no-results" style="text-align: center; margin-bottom: 50px; display: none; color: red;">No dishes found!</h1>
+
+    <!-- Download -->
+    </div>
+    <div class="app-download">
+        <p id="about-content">For Better Experience Download <br> FoodDel App</p>
+        <div class="app-download-platform">
+            <img src="images/play_store.png" alt="google">
+            <img src="images/app_store.png" alt="app store">
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="content">
+            <div class="footer-content-left">
+                <h1 class="text-title">Food Del</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis incidunt repellat laborum unde,
+                    repellendus autem debitis, earum odio veritatis molestiae, quos ipsa nihil dignissimos
+                    necessitatibus?</p>
+                <div class="footer-social-icons">
+                    <img src="images/facebook_icon.png" alt="">
+                    <img src="images/twitter_icon.png" alt="">
+                    <img src="images/linkedin_icon.png" alt="">
+                </div>
+            </div>
+            <div class="footer-content-center">
+                <h2>COMPANY</h2>
+                <ul>
+                    <li>Home</li>
+                    <li>About us</li>
+                    <li>Delivery</li>
+                    <li>Privacy policy</li>
+                </ul>
+            </div>
+            <div class="footer-content-right">
+                <h2>GET IN TOUCH</h2>
+                <ul>
+                    <li>+1-212-456-7890</li>
+                    <li>contact@fooddel.com</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="footer-copyright">Copyright 2024 &copy; Fooddel.com - All Right Reserved.</p>
+    </div>
+
+    <!-- Pop-Up -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <iframe src="login.html" frameborder="0"></iframe>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

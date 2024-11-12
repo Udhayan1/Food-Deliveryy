@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: outfit;
+        }
+        html, body {
+            display: grid;
+            height: 100vh;
+            place-items: center;
+            background-color: #c9d6ff;
+            background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+        }
+        .main_div {
+            width: 365px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+        }
+        .main_div .title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .form_container {
+            display: none;
+        }
+        .form_container.active {
+            display: block;
+        }
+        .input_box {
+            height: 50px;
+            width: 100%;
+            position: relative;
+            margin-top: 15px;
+        }
+        .input_box input {
+            height: 100%;
+            width: 100%;
+            outline: none;
+            border: 1px solid lightgrey;
+            border-radius: 5px;
+            padding-left: 45px;
+            font-size: 17px;
+            transition: all 0.3s ease;
+        }
+        .input_box input:focus {
+            border-color: orangered;
+        }
+        .input_box .icon {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            color: grey;
+        }
+        .option_div {
+            margin-top: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .option_div .check_box {
+            display: flex;
+            align-items: center;
+            padding-top: 7px;
+        }
+        .option_div span {
+            margin-left: 5px;
+            font-size: 16px;
+            color: #333;
+        }
+        .option_div .forget_div {
+            padding-top: 7px;
+        }
+        .option_div .forget_div a {
+            font-size: 16px;
+            color: orangered;
+        }
+        .button input {
+            padding-left: 0;
+            background: orangered;
+            color: #fff;
+            border: none;
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s linear;
+        }
+        .button input:hover {
+            background: orangered;
+        }
+        .form_toggle {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .form_toggle a {
+            color: orangered;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .form_toggle a:hover {
+            text-decoration: underline;
+        }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Del</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="icon" href="images/del-icon.png" type="image/png">
+</head>
+<body>
+
+    <!-- Cart Section -->
+    <div class="cart">
+        <h1 style="text-align: center; margin-top: 20px; margin-bottom: 15px;">Your Cart</h1>
+        <table id="cart-table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="cart-table-body">
+                <!-- Cart items will be dynamically added here -->
+            </tbody>
+        </table>
+        <div class="cart-summary">
+            <div id="total-price" style="margin-bottom: 20px; margin-top: 5px;">Total: $0.00</div>
+            <button id="proceed-to-payment" onclick="handlePayment()">Proceed to Payment</button>
+        </div>
+        <div id="notification"></div>
+    </div>
+
+    <div id="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+</html>
